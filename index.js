@@ -152,122 +152,125 @@ function addTaskToUI(task) {
 
 
 function setupEventListeners() {
-  // Cancel editing task event listener
-  const cancelEditBtn = document.getElementById('cancel-edit-btn');
-  cancelEditBtn.addEventListener('click', () => toggleModal(false, elements.editTaskModal));
+  document.addEventListener('DOMContentLoaded', function () {
+    init();
 
-  // Cancel adding new task event listener
-  const cancelAddTaskBtn = document.getElementById('cancel-add-task-btn');
-  cancelAddTaskBtn.addEventListener('click', () => {
-    toggleModal(false);
-    elements.filterDiv.style.display = 'none'; // Also hide the filter overlay
-  });
+    // Cancel editing task event listener
+    const cancelEditBtn = document.getElementById('cancel-edit-btn');
+    cancelEditBtn.addEventListener('click', () => toggleModal(false, elements.editTaskModal));
 
-  // Clicking outside the modal to close it
-  elements.filterDiv.addEventListener('click', () => {
-    toggleModal(false);
-    elements.filterDiv.style.display = 'none'; // Also hide the filter overlay
-  });
+    // Cancel adding new task event listener
+    const cancelAddTaskBtn = document.getElementById('cancel-add-task-btn');
+    cancelAddTaskBtn.addEventListener('click', () => {
+      toggleModal(false);
+      elements.filterDiv.style.display = 'none'; // Also hide the filter overlay
+    });
 
-  // Show sidebar event listener
-  elements.hideSideBarBtn.addEventListener('click', () => toggleSidebar(false));
-  elements.showSideBarBtn.addEventListener('click', () => toggleSidebar(true));
+    // Clicking outside the modal to close it
+    elements.filterDiv.addEventListener('click', () => {
+      toggleModal(false);
+      elements.filterDiv.style.display = 'none'; // Also hide the filter overlay
+    });
 
-  // Theme switch event listener
-  elements.themeSwitch.addEventListener('change', toggleTheme);
+    // Show sidebar event listener
+    elements.hideSideBarBtn.addEventListener('click', () => toggleSidebar(false));
+    elements.showSideBarBtn.addEventListener('click', () => toggleSidebar(true));
 
-  // Show Add New Task Modal event listener
-  elements.createNewTaskBtn.addEventListener('click', () => {
-    toggleModal(true);
-    elements.filterDiv.style.display = 'block'; // Also show the filter overlay
-  });
+    // Theme switch event listener
+    elements.themeSwitch.addEventListener('change', toggleTheme);
 
-  // Add new task form submission event listener
-  elements.modalWindow.addEventListener('submit', (event) => {
-    addTask(event)
-  });
-}
+    // Show Add New Task Modal event listener
+    elements.createNewTaskBtn.addEventListener('click', () => {
+      toggleModal(true);
+      elements.filterDiv.style.display = 'block'; // Also show the filter overlay
+    });
+
+    // Add new task form submission event listener
+    elements.modalWindow.addEventListener('submit', (event) => {
+      addTask(event)
+    });
+  }
 
 // Toggles tasks modal
 // Task: Fix bugs
 function toggleModal(show, modal = elements.modalWindow) {
-  modal.style.display = show ? 'block' : 'none';
-}
+      modal.style.display = show ? 'block' : 'none';
+    }
 
 /*************************************************************************************************************************************************
  * COMPLETE FUNCTION CODE
  * **********************************************************************************************************************************************/
 
 function addTask(event) {
-  event.preventDefault();
+      event.preventDefault();
 
-  //Assign user input to the task object
-  const task = {
+      //Assign user input to the task object
+      const task = {
 
-  };
-  const newTask = createNewTask(task);
-  if (newTask) {
-    addTaskToUI(newTask);
-    toggleModal(false);
-    elements.filterDiv.style.display = 'none'; // Also hide the filter overlay
-    event.target.reset();
-    refreshTasksUI();
-  }
-}
+      };
+      const newTask = createNewTask(task);
+      if (newTask) {
+        addTaskToUI(newTask);
+        toggleModal(false);
+        elements.filterDiv.style.display = 'none'; // Also hide the filter overlay
+        event.target.reset();
+        refreshTasksUI();
+      }
+    }
 
 
 function toggleSidebar(show) {
 
-}
+    }
 
 function toggleTheme() {
 
-}
+    }
 
 
 
 function openEditTaskModal(task) {
-  // Set task details in modal inputs
+      // Set task details in modal inputs
 
 
-  // Get button elements from the task modal
+      // Get button elements from the task modal
 
 
-  // Call saveTaskChanges upon click of Save Changes button
+      // Call saveTaskChanges upon click of Save Changes button
 
 
-  // Delete task using a helper function and close the task modal
+      // Delete task using a helper function and close the task modal
 
 
-  toggleModal(true, elements.editTaskModal); // Show the edit task modal
-}
+      toggleModal(true, elements.editTaskModal); // Show the edit task modal
+    }
 
 function saveTaskChanges(taskId) {
-  // Get new user inputs
+      // Get new user inputs
 
 
-  // Create an object with the updated task details
+      // Create an object with the updated task details
 
 
-  // Update task using a hlper functoin
+      // Update task using a hlper functoin
 
 
-  // Close the modal and refresh the UI to reflect the changes
+      // Close the modal and refresh the UI to reflect the changes
 
-  refreshTasksUI();
-}
+      refreshTasksUI();
+    }
 
 /*************************************************************************************************************************************************/
 
 document.addEventListener('DOMContentLoaded', function () {
-  init(); // init is called after the DOM is fully loaded
-});
+      init(); // init is called after the DOM is fully loaded
+    });
 
-function init() {
-  setupEventListeners();
-  const showSidebar = localStorage.getItem('showSideBar') === 'true';
-  toggleSidebar(showSidebar);
-  const isLightTheme = localStorage.getItem('light-theme') === 'enabled';
-  document.body.classList.toggle('light-theme', isLightTheme);
-  fetchAndDisplayBoardsAndTasks(); // Initial display of boards and tasks
-}
+  function init() {
+    setupEventListeners();
+    const showSidebar = localStorage.getItem('showSideBar') === 'true';
+    toggleSidebar(showSidebar);
+    const isLightTheme = localStorage.getItem('light-theme') === 'enabled';
+    document.body.classList.toggle('light-theme', isLightTheme);
+    fetchAndDisplayBoardsAndTasks(); // Initial display of boards and tasks
+  }
