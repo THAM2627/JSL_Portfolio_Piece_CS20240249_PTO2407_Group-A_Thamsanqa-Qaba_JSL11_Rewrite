@@ -169,28 +169,40 @@ function setupEventListeners() {
   }
 
   // Clicking outside the modal to close it
-  elements.filterDiv.addEventListener('click', () => {
-    toggleModal(false);
-    elements.filterDiv.style.display = 'none'; // Also hide the filter overlay
-  });
-
+  if (elements.filterDiv) {
+    elements.filterDiv.addEventListener('click', () => {
+      toggleModal(false);
+      elements.filterDiv.style.display = 'none'; // Also hide the filter overlay
+    });
+  }
   // Show sidebar event listener
-  elements.hideSideBarBtn.addEventListener('click', () => toggleSidebar(false));
-  elements.showSideBarBtn.addEventListener('click', () => toggleSidebar(true));
+  if (elements.hideSideBarBtn) {
+    elements.hideSideBarBtn.addEventListener('click', () => toggleSidebar(false));
+  }
+
+  if (elements.showSideBarBtn) {
+    elements.showSideBarBtn.addEventListener('click', () => toggleSidebar(true));
+  }
 
   // Theme switch event listener
-  elements.themeSwitch.addEventListener('change', toggleTheme);
+  if (elements.themeSwitch) {
+    elements.themeSwitch.addEventListener('change', toggleTheme);
+  }
 
   // Show Add New Task Modal event listener
-  elements.createNewTaskBtn.addEventListener('click', () => {
-    toggleModal(true);
-    elements.filterDiv.style.display = 'block'; // Also show the filter overlay
-  });
+  if (elements.createNewTaskBtn) {
+    elements.createNewTaskBtn.addEventListener('click', () => {
+      toggleModal(true);
+      elements.filterDiv.style.display = 'block'; // Also show the filter overlay
+    });
+  }
 
   // Add new task form submission event listener
-  elements.modalWindow.addEventListener('submit', (event) => {
-    addTask(event)
-  });
+  if (elements.modalWindow) {
+    elements.modalWindow.addEventListener('submit', (event) => {
+      addTask(event)
+    });
+  }
 }
 
 // Toggles tasks modal
