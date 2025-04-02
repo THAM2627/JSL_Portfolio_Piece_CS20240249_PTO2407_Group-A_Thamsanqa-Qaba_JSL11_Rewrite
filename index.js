@@ -24,8 +24,8 @@ const elements = {
   headerBoardName: document.getElementById('header-board-name'),
   columnDivs: document.querySelectorAll('.column-div'),
   filterDiv: document.getElementById('filterDiv'),
-  modalWindow: document.getElementById('new-task-modal-window'),
-  editTaskModal: document.getElementById('edit-Task-Modal-window'),
+  modalWindow: document.querySelector('new-task-modal-window'),
+  editTaskModal: document.querySelector('edit-Task-Modal-window'),
   hideSideBarBtn: document.getElementById('hide-side-bar-btn'),
   showSideBarBtn: document.getElementById('show-side-bar-btn'),
   themeSwitch: document.getElementById('switch'),
@@ -38,7 +38,7 @@ const elements = {
   titleInput: document.getElementById('title-input'),
   description: document.getElementById('desc-input'),
   selectStatus: document.getElementById('select-status'),
-  editTitleInput: document.getElementById('edit-title-input'),
+  editTitleInput: document.getElementById('edit-task-title-input'),
   editDescription: document.getElementById('edit-task-desc-input'),
   editSelectStatus: document.getElementById('edit-select-status'),
   saveTaskChangesBtn: document.getElementById('save-task-changes-btn'),
@@ -161,6 +161,7 @@ function addTaskToUI(task) {
 
   tasksContainer.appendChild(taskElement);
 }
+
 
 
 
