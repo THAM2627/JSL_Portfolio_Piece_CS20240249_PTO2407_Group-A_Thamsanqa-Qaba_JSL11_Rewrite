@@ -24,7 +24,7 @@ const elements = {
   headerBoardName: document.getElementById('header-board-name'),
   columnDivs: document.querySelectorAll('.column-div'),
   filterDiv: document.getElementById('filterDiv'),
-  modalWindow: document.querySelector('new-task-modal-window'),
+  modalWindow: document.querySelector('.new-task-modal-window'),
   editTaskModal: document.querySelector('.edit-Task-Modal-window'),
   hideSideBarBtn: document.getElementById('hide-side-bar-btn'),
   showSideBarBtn: document.getElementById('show-side-bar-btn'),
