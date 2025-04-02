@@ -31,7 +31,7 @@ const elements = {
   themeSwitch: document.getElementById('switch'),
   cancelEditBtn: document.getElementById('cancel-edit-btn'),
   cancelAddTaskBtn: document.getElementById('cancel-add-task-btn'),
-  createNewTaskBtn: document.getElementById('create-task-Btn'),
+  createNewTaskBtn: document.getElementById('create-task-btn'),
   addNewTaskBtn: document.getElementById('add-new-task-btn'),
   logo: document.getElementById('logo'),
   buttons: document.querySelectorAll('.board-btn'),
