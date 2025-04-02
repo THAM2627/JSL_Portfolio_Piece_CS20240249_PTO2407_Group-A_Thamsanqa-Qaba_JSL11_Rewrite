@@ -203,8 +203,8 @@ function setupEventListeners() {
   }
 
   // Show Add New Task Modal event listener
-  if (elements.createNewTaskBtn) {
-    elements.createNewTaskBtn.addEventListener('click', () => {
+  if (elements.addNewTaskBtn) {
+    elements.addNewTaskBtn.addEventListener('click', () => {
       toggleModal(true);
       elements.filterDiv.style.display = 'block'; // Also show the filter overlay
     });
@@ -270,9 +270,9 @@ function toggleTheme() {
 
 function openEditTaskModal(task) {
   // Set task details in modal inputs
-  document.getElementById('title-input').value = task.title;
-  document.getElementById('desc-input').value = task.description;
-  document.getElementById('select-status').value = task.status;
+  document.getElementById('edit-task-title-input').value = task.title;
+  document.getElementById('edit-task-desc-input').value = task.description;
+  document.getElementById('edit-select-status').value = task.status;
 
   // Get button elements from the task modal
   const saveChangesBtn = document.getElementById('save-changes-btn');
