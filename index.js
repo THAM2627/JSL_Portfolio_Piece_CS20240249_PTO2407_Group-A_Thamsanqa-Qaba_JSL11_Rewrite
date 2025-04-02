@@ -25,10 +25,10 @@ const elements = {
   columnDivs: document.querySelectorAll('.column-div'),
   filterDiv: document.getElementById('filterDiv'),
   modalWindow: document.getElementById('new-task-modal-window'),
-  editTaskModal: document.getElementById('editTaskModal'),
-  hideSideBarBtn: document.getElementById('hideSideBarBtn'),
-  showSideBarBtn: document.getElementById('showSideBarBtn'),
-  themeSwitch: document.getElementById('themeSwitch'),
+  editTaskModal: document.getElementById('edit-Task-Modal-window'),
+  hideSideBarBtn: document.getElementById('hide-side-bar-btn'),
+  showSideBarBtn: document.getElementById('show-side-bar-btn'),
+  themeSwitch: document.getElementById('switch'),
   cancelEditBtn: document.getElementById('cancel-edit-btn'),
   cancelAddTaskBtn: document.getElementById('cancel-add-task-btn'),
   createNewTaskBtn: document.getElementById('createNewTaskBtn'),
@@ -38,6 +38,11 @@ const elements = {
   titleInput: document.getElementById('title-input'),
   description: document.getElementById('desc-input'),
   selectStatus: document.getElementById('select-status'),
+  editTitleInput: document.getElementById('edit-title-input'),
+  editDescription: document.getElementById('edit-task-desc-input'),
+  editSelectStatus: document.getElementById('edit-select-status'),
+  saveTaskChangesBtn: document.getElementById('save-task-changes-btn'),
+  deleteTaskBtn: document.getElementById('delete-task-btn'),
 }
 
 let activeBoard = ""
