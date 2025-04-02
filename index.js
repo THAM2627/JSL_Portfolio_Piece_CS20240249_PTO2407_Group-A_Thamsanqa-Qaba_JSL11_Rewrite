@@ -275,7 +275,7 @@ function openEditTaskModal(task) {
   document.getElementById('edit-select-status').value = task.status;
 
   // Get button elements from the task modal
-  const saveChangesBtn = document.getElementById('save-changes-btn');
+  const saveChangesBtn = document.getElementById('save-task-changes-btn');
   const deleteTaskBtn = document.getElementById('delete-task-btn');
   const cancelEditBtn = document.getElementById('cancel-edit-btn');
 
@@ -322,6 +322,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function init() {
+
   setupEventListeners();
   const showSidebar = localStorage.getItem('showSideBar') === 'true';
   toggleSidebar(showSidebar);
