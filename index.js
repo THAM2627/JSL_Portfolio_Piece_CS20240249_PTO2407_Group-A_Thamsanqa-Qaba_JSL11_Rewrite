@@ -25,7 +25,7 @@ const elements = {
   columnDivs: document.querySelectorAll('.column-div'),
   filterDiv: document.getElementById('filterDiv'),
   modalWindow: document.querySelector('.new-task-modal-window'),
-  editTaskModal: document.querySelector('.edit-task-Modal-window'),
+  editTaskModal: document.querySelector('.edit-task-modal-window'),
   hideSideBarBtn: document.getElementById('hide-side-bar-btn'),
   showSideBarBtn: document.getElementById('show-side-bar-btn'),
   themeSwitch: document.getElementById('switch'),
