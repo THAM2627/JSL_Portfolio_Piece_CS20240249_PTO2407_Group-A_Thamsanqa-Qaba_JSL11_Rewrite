@@ -139,6 +139,7 @@ function styleActiveBoard(boardName) {
 }
 
 
+
 function addTaskToUI(task) {
   const column = document.querySelector(`.column-div[data-status="${task.status}"]`);
   if (!column) {
@@ -160,6 +161,7 @@ function addTaskToUI(task) {
   taskElement.setAttribute('data-task-id', task.id);
 
   tasksContainer.appendChild(taskElement);
+
 }
 
 
