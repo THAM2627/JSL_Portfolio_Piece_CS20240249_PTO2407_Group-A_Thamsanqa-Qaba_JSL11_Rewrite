@@ -192,7 +192,8 @@ function setupEventListeners() {
       } else {
         console.error()
         elements.filterDiv.style.display = 'none'; // Also hide the filter overlay
-      });
+      }
+    });
   }
   // Show sidebar event listener
   if (elements.hideSideBarBtn) {
@@ -227,7 +228,7 @@ function setupEventListeners() {
 // Toggles tasks modal
 // Task: Fix bugs
 function toggleModal(show, modal = elements.modalWindow) {
-  if (!modal) {
+  if (modal) {
     modal.style.display = show ? 'block' : 'none';
   } else {
     console.error('Modal is not working');
