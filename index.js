@@ -218,12 +218,12 @@ function setupEventListeners() {
   }
 
   // Add new task form submission event listener
-  if (elements.modalWindow) {
-    elements.modalWindow.addEventListener('submit', (event) => {
-      addTask(event)
-    });
+  if (elements.editTaskModal) {
+    toggleModal(true, elements.editTaskModal);
+  } else {
+    console.error('Modal is not working')
   }
-}
+};
 
 // Toggles tasks modal
 // Task: Fix bugs
