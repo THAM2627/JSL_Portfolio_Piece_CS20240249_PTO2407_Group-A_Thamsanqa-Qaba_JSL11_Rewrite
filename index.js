@@ -190,7 +190,7 @@ function setupEventListeners() {
       if (elements.modalWindow) {
         toggleModal(false, elements.modalWindow);
       } else {
-        console.error()
+        console.error('Modal Window Not Working')
         elements.filterDiv.style.display = 'none'; // Also hide the filter overlay
       }
     });
@@ -300,9 +300,13 @@ function openEditTaskModal(task) {
     deleteTask(task.id);
     toggleModal(false, elements.editTaskModal);
   };
-
-  toggleModal(true, elements.editTaskModal); // Show the edit task modal
+  if (elements.editTaskModal) {
+    toggleModal(true, elements.editTaskModal); // Show the edit task modal
+  } else {
+    console.error('Edit Modal is not working')
+  }
 }
+
 
 function saveTaskChanges(taskId) {
   // Get new user inputs
