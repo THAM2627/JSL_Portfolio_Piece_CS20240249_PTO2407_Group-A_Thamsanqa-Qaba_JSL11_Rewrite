@@ -24,7 +24,7 @@ const elements = {
   headerBoardName: document.getElementById('header-board-name'),
   columnDivs: document.querySelectorAll('.column-div'),
   filterDiv: document.getElementById('filterDiv'),
-  modalWindow: document.querySelector('.new-task-modal-window'),
+  modalWindow: document.getElementById('new-task-modal-window'),
   editTaskModal: document.querySelector('.edit-task-modal-window'),
   hideSideBarBtn: document.getElementById('hide-side-bar-btn'),
   showSideBarBtn: document.getElementById('show-side-bar-btn'),
@@ -43,6 +43,7 @@ const elements = {
   editSelectStatus: document.getElementById('edit-select-status'),
   saveTaskChangesBtn: document.getElementById('save-task-changes-btn'),
   deleteTaskBtn: document.getElementById('delete-task-btn'),
+
 }
 
 let activeBoard = ""
