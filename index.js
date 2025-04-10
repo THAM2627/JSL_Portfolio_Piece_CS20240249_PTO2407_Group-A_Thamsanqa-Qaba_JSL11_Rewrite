@@ -255,7 +255,6 @@ function addTask(event) {
   };
   const newTask = createNewTask(task);
   if (newTask) {
-    addTaskToUI(newTask);
     toggleModal(false);
     elements.filterDiv.style.display = 'none'; // Also hide the filter overlay
     event.target.reset();
@@ -313,9 +312,9 @@ function openEditTaskModal(task) {
 
 function saveTaskChanges(taskId) {
   // Get new user inputs
-  const updatedTitle = document.getElementById('title-input').value;
-  const updatedDescription = document.getElementById('desc-input').value;
-  const updatedStatus = document.getElementById('select-status').value;
+  const updatedTitle = document.getElementById('edit-task-title-input').value;
+  const updatedDescription = document.getElementById('edit-task-desc-input').value;
+  const updatedStatus = document.getElementById('edit-select-status').value;
 
   // Create an object with the updated task details
   const updatedTask = {
