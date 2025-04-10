@@ -192,9 +192,10 @@ function setupEventListeners() {
     elements.filterDiv.addEventListener('click', () => {
       if (elements.modalWindow) {
         toggleModal(false, elements.modalWindow);
+        elements.filterDiv.style.display = 'none';
       } else {
         console.error('Modal Window Not Working')
-        elements.filterDiv.style.display = 'none'; // Also hide the filter overlay
+        // Also hide the filter overlay
       }
     });
   }
@@ -219,10 +220,10 @@ function setupEventListeners() {
       elements.filterDiv.style.display = 'block'; // Also show the filter overlay
     });
   }
-
+  elements.createNewTaskBtn.addEventListener('click', addTask);
   // Add new task form submission event listener
   if (elements.editTaskModal) {
-    toggleModal(true, elements.editTaskModal);
+    toggleModal(false, elements.editTaskModal);
   } else {
     console.error('Modal is not working')
   }
