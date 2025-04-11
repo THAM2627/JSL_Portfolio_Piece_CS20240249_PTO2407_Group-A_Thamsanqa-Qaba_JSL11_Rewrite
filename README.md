@@ -107,4 +107,4 @@ As you embark on implementing these features, remember the value of tackling the
 - **Reflecting Task Updates in localStorage**: As a user, I expect tasks that I update to have their changes reflected in localStorage so that any modifications are not lost.
 - **Removing Deleted Tasks from localStorage**: As a user, I want tasks that I delete to be removed from localStorage so that my task list remains accurate and up-to-date.
 
-LOOM LINK: https://www.loom.com/share/adfd3f644979468dbf7d6db88508691e
+LOOM LINK: https://www.loom.com/share/dd9ec4898fe44fb4945879338dfafdae
